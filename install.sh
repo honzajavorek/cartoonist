@@ -2,13 +2,13 @@
 
 # Installing System Dependencies
 if [ "$(uname)" = "Darwin" ]; then
-  cat ./dependencies/brew.txt | xargs brew install
+  cat ./dependencies/os-brew.txt | xargs brew install
 else
   echo 'Unsupported OS.'
   exit 1
 fi
 
-# Installing Fred's ImageMagick Scripts from http://www.fmwconcepts.com/imagemagick/
+# Installing Fred's ImageMagick Scripts
 mkdir ./lib
 cat ./dependencies/lib.txt | xargs -I {} \
   wget -O ./lib/{} 'http://www.fmwconcepts.com/imagemagick/downloadcounter.php?scriptname={}&dirname={}'
