@@ -13,7 +13,7 @@ $ ./install.sh
 - Installs system dependencies.
 - Installs necessary [Fred's ImageMagick Scripts](http://www.fmwconcepts.com/imagemagick/) into the `./lib` directory.
 
-> **Note:** Only [Homebrew](http://brew.sh/) is supported as of now. Feel free to contribute installation of dependencies with your favorite package manager, e.g. `apt-get`.
+> **Note:** Only [Homebrew](http://brew.sh/) and [openSUSE](https://www.opensuse.org/) are supported as of now. Feel free to contribute installation of dependencies with your favorite package manager, e.g. `apt-get`.
 
 ## Usage
 

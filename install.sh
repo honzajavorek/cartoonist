@@ -3,6 +3,9 @@
 # Installing System Dependencies
 if [ "$(uname)" = "Darwin" ]; then
   cat ./dependencies/os-brew.txt | xargs brew install
+elif grep '^ID=.*opensuse' /etc/os-release > /dev/null; then
+  # the package names happen to work
+  sudo zypper install $(cat ./dependencies/os-brew.txt)
 else
   echo 'Unsupported OS.'
   exit 1
