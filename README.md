@@ -40,8 +40,10 @@ $ ./cartoonist.sh photo-of-my-drawing.jpg
 
 ## Tests
 
-I assembled a little test suite (or rather _verification-by-eye_ suite) to develop this script. Feel free to use it. Sample images are in the `test` directory. You can run the suite by executing `./test.sh`. It uses throwaway `./build` directory where it produces the results.
+I assembled a little test suite (or rather _verification-by-eye_ suite) to develop this script. Sample images are in the `test` directory. You can run the suite by executing `./test.sh`. It uses throwaway `./build` directory where it produces the results.
 
 ## License
 
 The script is licensed under [MIT](./LICENSE). If you want to use it, please note that dependencies (especially Fred's ImageMagick Scripts) can have different licensing and you should respect it.
+
+You can freely use the images inside of the `./test` directory to develop changes in the cartoonist, but you are not permitted to use them anywhere else unless permitted by me personally. `./test` is **NOT** licensed by MIT and is, for any other use than for debugging this script, a subject of my copyright.
