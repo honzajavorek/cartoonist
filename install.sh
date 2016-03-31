@@ -7,6 +7,8 @@ elif grep '^ID=.*opensuse' /etc/os-release > /dev/null; then
   sudo zypper install $(cat ./dependencies/os-linux.txt)
 elif grep '^ID=arch' /etc/os-release > /dev/null; then
   sudo pacman -S --needed $(cat ./dependencies/os-linux.txt)
+elif grep '^ID=.*fedora' /etc/os-release > /dev/null; then
+  sudo dnf install $(cat ./dependencies/os-fedora.txt)
 else
   echo 'Unsupported OS.'
   exit 1
