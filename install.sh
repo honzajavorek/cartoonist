@@ -6,6 +6,8 @@ if [ "$(uname)" = "Darwin" ]; then
 elif grep '^ID=.*opensuse' /etc/os-release > /dev/null; then
   # the package names happen to work
   sudo zypper install $(cat ./dependencies/os-brew.txt)
+elif grep '^ID=.*fedora' /etc/os-release > /dev/null; then
+  sudo dnf install $(cat ./dependencies/os-fedora.txt)
 else
   echo 'Unsupported OS.'
   exit 1
