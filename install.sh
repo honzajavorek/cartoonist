@@ -6,6 +6,8 @@ if [ "$(uname)" = "Darwin" ]; then
 elif grep '^ID=.*opensuse' /etc/os-release > /dev/null; then
   # the package names happen to work
   sudo zypper install $(cat ./dependencies/os-brew.txt)
+elif grep '^ID=arch' /etc/os-release > /dev/null; then
+  sudo pacman -S --needed $(cat ./dependencies/os-brew.txt)
 else
   echo 'Unsupported OS.'
   exit 1
