@@ -2,10 +2,9 @@
 
 # Installing System Dependencies
 if [ "$(uname)" = "Darwin" ]; then
-  cat ./dependencies/os-brew.txt | xargs brew install
+  cat ./dependencies/os-mac.txt | xargs brew install
 elif grep '^ID=.*opensuse' /etc/os-release > /dev/null; then
-  # the package names happen to work
-  sudo zypper install $(cat ./dependencies/os-brew.txt)
+  sudo zypper install $(cat ./dependencies/os-linux.txt)
 elif grep '^ID=arch' /etc/os-release > /dev/null; then
   sudo pacman -S --needed $(cat ./dependencies/os-linux.txt)
 else
