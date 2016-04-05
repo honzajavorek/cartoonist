@@ -1,0 +1,8 @@
+bc
+coreutils
+gawk
+grep
+imagemagick
+potrace
+sed
+wget
