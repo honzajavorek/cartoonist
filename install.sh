@@ -14,6 +14,8 @@ elif grep '^ID=.*fedora' /etc/os-release > /dev/null; then
   else
     sudo yum install $(cat ./dependencies/os-fedora.txt)
   fi
+elif grep '^ID=debian' /etc/os-release > /dev/null || grep '^ID_LIKE=debian' /etc/os-release > /dev/null; then
+  sudo apt-get install $(cat ./dependencies/os-linux.txt)
 else
   echo 'Unsupported OS.'
   exit 1
