@@ -4,6 +4,15 @@ Tool to help lazy cartoonists to convert photo of a hand drawing into an SVG/PDF
 
 ![cartoonist](./cartoonist.png)
 
+## Docker usage
+
+```shell
+$ docker build --tag cartoonist .
+$ docker run --rm -v "/absolute/path/to/source/images:/input" cartoonist
+```
+
+This command runs conversion for each JPG file in `/absolute/path/to/source/images` directory and produces output back to the same directory. 
+
 ## Installation
 
 ```shell
